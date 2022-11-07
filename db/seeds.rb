@@ -7,7 +7,9 @@ users = User.create([{ name: 'Nick' }, { name: 'John' }, { name: 'Mark' }, { nam
 tests = Test.create(
   [
     { title: 'SQL Basics', level: 1, category_id: categories[0].id, author_id: users[0].id },
+    { title: 'SQL Advanced', level: 5, category_id: categories[0].id, author_id: users[0].id },
     { title: 'Python Advanced', level: 4, category_id: categories[1].id, author_id: users[0].id },
+    { title: 'Python Basics', level: 4, category_id: categories[1].id, author_id: users[0].id },
     { title: 'Introduction to HTML', level: 2, category_id: categories[2].id, author_id: users[3].id },
     { title: 'Introduction to CCS3', level: 1, category_id: categories[3].id, author_id: users[3].id }
   ]
@@ -56,5 +58,16 @@ answers = Answer.create(
     { body: 'At the end of the document', correct: false, question_id: questions[7].id },
     { body: 'In the <body> section', correct: false, question_id: questions[7].id },
     { body: 'In the <head> section', correct: true, question_id: questions[7].id }
+  ]
+)
+
+results = Result.create(
+  [
+    { user_id: users[2].id, test_id: tests[0].id },
+    { user_id: users[3].id, test_id: tests[2].id },
+    { user_id: users[4].id, test_id: tests[3].id },
+    { user_id: users[1].id, test_id: tests[1].id },
+    { user_id: users[1].id, test_id: tests[0].id },
+    { user_id: users[3].id, test_id: tests[2].id }
   ]
 )
