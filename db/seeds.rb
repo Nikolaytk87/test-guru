@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-categories = Category.create([{ title: 'SQL' }, { title: 'Python' }, { title: 'HTML' }, { title: 'CSS' }])
+categories = Category.create!([{ title: 'SQL' }, { title: 'Python' }, { title: 'HTML' }, { title: 'CSS' }])
 
-users = User.create([{ name: 'Nick' }, { name: 'John' }, { name: 'Mark' }, { name: 'Mike' }, { name: 'Jane' }])
+users = User.create!([{ name: 'Nick' }, { name: 'John' }, { name: 'Mark' }, { name: 'Mike' }, { name: 'Jane' }])
 
-tests = Test.create(
+tests = Test.create!(
   [
     { title: 'SQL Basics', level: 1, category_id: categories[0].id, author_id: users[0].id },
     { title: 'SQL Advanced', level: 5, category_id: categories[0].id, author_id: users[0].id },
@@ -15,7 +15,7 @@ tests = Test.create(
   ]
 )
 
-questions = Question.create(
+questions = Question.create!(
   [
     { body: 'What does HTML stand for?', test_id: tests[2].id },
     { body: 'Who is making the Web standards?', test_id: tests[2].id },
@@ -28,7 +28,7 @@ questions = Question.create(
   ]
 )
 
-answers = Answer.create(
+answers = Answer.create!(
   [
     { body: 'Hyper Text Markup Language', correct: true, question_id: questions[0].id },
     { body: 'Home Tool Markup Language', correct: false, question_id: questions[0].id },
@@ -61,7 +61,7 @@ answers = Answer.create(
   ]
 )
 
-results = Result.create(
+results = Result.create!(
   [
     { user_id: users[2].id, test_id: tests[0].id },
     { user_id: users[3].id, test_id: tests[2].id },
