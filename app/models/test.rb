@@ -1,6 +1,7 @@
 class Test < ApplicationRecord
   def self.filter(title)
-    category = Category.find_by(title:)
-    where(category_id: category).order(title: :desc).pluck(:title)
+    joins('JOIN categories ON tests.category_id = categories.id').where(categories: { title: })
+                                                                 .order(title: :desc)
+                                                                 .pluck(:title)
   end
 end
