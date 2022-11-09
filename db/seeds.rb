@@ -17,14 +17,14 @@ tests = Test.create!(
 
 questions = Question.create!(
   [
-    { body: 'What does HTML stand for?', test_id: tests[2].id },
-    { body: 'Who is making the Web standards?', test_id: tests[2].id },
-    { body: 'What is a correct syntax to output "Hello World" in Python?', test_id: tests[1].id },
-    { body: 'How do you insert COMMENTS in Python code?', test_id: tests[1].id },
+    { body: 'What does HTML stand for?', test_id: tests[4].id },
+    { body: 'Who is making the Web standards?', test_id: tests[4].id },
+    { body: 'What is a correct syntax to output "Hello World" in Python?', test_id: tests[2].id },
+    { body: 'How do you insert COMMENTS in Python code?', test_id: tests[3].id },
     { body: 'What does SQL stand for?', test_id: tests[0].id },
-    { body: 'Which SQL statement is used to extract data from a database?', test_id: tests[0].id },
-    { body: 'What does CSS stand for?', test_id: tests[3].id },
-    { body: 'Where in an HTML document is the correct place to refer to external style sheet?', test_id: tests[3].id }
+    { body: 'Which SQL statement is used to extract data from a database?', test_id: tests[1].id },
+    { body: 'What does CSS stand for?', test_id: tests[5].id },
+    { body: 'Where in an HTML document is the correct place to refer to external style sheet?', test_id: tests[5].id }
   ]
 )
 
