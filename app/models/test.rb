@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Test < ApplicationRecord
-  has_and_belongs_to_many :users
+  has_many :tests_users
+  has_many :users, through: :tests_users
   has_many :questions
   belongs_to :category
   belongs_to :author
