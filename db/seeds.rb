@@ -60,14 +60,3 @@ answers = Answer.create!(
     { body: 'In the <head> section', correct: true, question_id: questions[7].id }
   ]
 )
-
-results = Result.create!(
-  [
-    { user_id: users[2].id, test_id: tests[0].id },
-    { user_id: users[3].id, test_id: tests[2].id },
-    { user_id: users[4].id, test_id: tests[3].id },
-    { user_id: users[1].id, test_id: tests[1].id },
-    { user_id: users[1].id, test_id: tests[0].id },
-    { user_id: users[3].id, test_id: tests[2].id }
-  ]
-)
