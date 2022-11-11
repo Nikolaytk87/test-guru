@@ -15,4 +15,6 @@ class Test < ApplicationRecord
         lambda { |title|
           joins(:category).where(categories: { title: }).order(title: :desc).pluck(:title)
         }
+
+  validates :title, presence: true
 end
