@@ -6,5 +6,4 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   validates :body, presence: true
-  validates :answers, length: { maximum: 4 }
 end
