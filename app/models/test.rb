@@ -18,6 +18,7 @@ class Test < ApplicationRecord
         lambda { |title|
           joins(:category).where(categories: { title: }).order(title: :desc)
         }
+
   def self.filter_by_category(title)
     by_category(title).pluck(:title)
   end
