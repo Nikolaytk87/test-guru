@@ -2,7 +2,9 @@
 
 categories = Category.create!([{ title: 'SQL' }, { title: 'Python' }, { title: 'HTML' }, { title: 'CSS' }])
 
-users = User.create!([{ name: 'Nick' }, { name: 'John' }, { name: 'Mark' }, { name: 'Mike' }, { name: 'Jane' }])
+users = User.create!([{ name: 'Nick', email: 'nick@example.com' }, { name: 'John', email: 'john@example.com' },
+                      { name: 'Mark', email: 'mark@example.com' }, { name: 'Mike', email: 'mike@example.com' },
+                      { name: 'Jane', email: 'jane@example.com' }])
 
 tests = Test.create!(
   [
