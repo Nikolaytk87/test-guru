@@ -1,16 +1,12 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index new create]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[new create]
+  before_action :find_question, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    render inline: '<p>Questions for test number <%= @test.id %>:  <%=  @test.questions.pluck(:body) %></p>'
-  end
+  def show; end
 
-  def show
-    render inline: '<p>Question number <%= @question.id %>:  <%=  @question.body %></p>'
-  end
+  def edit; end
 
   def new
     @question = @test.questions.new
@@ -19,15 +15,23 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to @question
+      redirect_to @test
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+  def update
+    if @question.update(question_params)
+      redirect_to test_path(@question.test_id)
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @question.destroy
-    render inline 'Question number <%= params[:id] removed %>'
+    redirect_to @question.test
   end
 
   private
