@@ -8,8 +8,9 @@ module TestsHelper
     Time.current.year
   end
 
-  def github_url(author, repo)
-    "https://github.com/#{author}/#{repo}"
+  def github_url(author:, repo:, title:)
+    link_to title, "https://github.com/#{author}}/#{repo}", target: '_blank',
+                                                            rel: 'noopener nofollow'
   end
 
   def number_of_questions(test)
