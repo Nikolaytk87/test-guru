@@ -63,7 +63,7 @@ answers = Answer.create!(
   ]
 )
 
-test_results = TestResult.create(
+test_results = TestPassage.create(
   [
     { user_id: users[0].id, test: tests[0] },
     { user_id: users[1].id, test: tests[0] },
