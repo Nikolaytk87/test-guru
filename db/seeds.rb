@@ -21,7 +21,7 @@ questions = Question.create!(
   [
     { body: 'What does HTML stand for?', test: tests[4] },
     { body: 'Who is making the Web standards?', test: tests[4] },
-    { body: 'Choose the correct HTML element for the largest heading:', test: test[4] },
+    { body: 'Choose the correct HTML element for the largest heading:', test: tests[4] },
     { body: 'What is a correct syntax to output "Hello World" in Python?', test: tests[2] },
     { body: 'How do you insert COMMENTS in Python code?', test: tests[3] },
     { body: 'What does SQL stand for?', test: tests[0] },
