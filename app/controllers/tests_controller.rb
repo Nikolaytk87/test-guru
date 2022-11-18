@@ -15,9 +15,7 @@ class TestsController < ApplicationController
   private
 
   def set_test
-    @test = Test.find(
-      params[:id]
-    )
+    @test = Test.find(params[:id])
   end
 
   def set_user
