@@ -1,0 +1,38 @@
+// Place all the styles related to the TestPassages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.result-header {
+    text-align: center;
+}
+
+.result {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+.successfully_passed_test span {
+    font-size: 14px;
+    color: green
+}
+
+.failed_passed_test span {
+    font-size: 14px;
+    color: red
+}
+
+
+body {
+    margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.show {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+}
