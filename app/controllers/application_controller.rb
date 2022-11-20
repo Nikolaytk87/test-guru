@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     return if current_user
 
-    set_original_path
+    store_location
     redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
   end
 
@@ -23,7 +23,11 @@ class ApplicationController < ActionController::Base
     current_user.present?
   end
 
-  def set_original_path
-    cookies[:original_path] = request.env['PATH_INFO']
+  def store_location
+    cookies[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def redirect_back_or(default)
+    redirect_to cookies.delete(:forwarding_url) || default
   end
 end
