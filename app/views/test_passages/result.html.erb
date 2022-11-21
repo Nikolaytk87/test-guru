@@ -7,5 +7,4 @@
   <p class="failed_passed_test result"><strong><%=  @test_passage.user.email %></strong>, you did not pass the test <br>
     <span>Score: <%= @test_passage.percentage_correct_answers %> %</span></p>
 <% end %>
-
 <p class ="result"><%= link_to 'Back to All Tests', tests_path %></p>
