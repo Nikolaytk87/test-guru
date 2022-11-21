@@ -1,10 +1,10 @@
 <h1 class="result-header">The <%= @test_passage.test.title %> Test was Completed!</h1>
 <% if @test_passage.successfully_passed_test? %>
-  <p class="successfully_passed_test result">Congratulations, <strong><%=  @test_passage.user.name %> </strong><br>
+  <p class="successfully_passed_test result">Congratulations, <strong><%=  @test_passage.user.email %> </strong><br>
     <span  class="percentage_success">Score: <%= @test_passage.percentage_correct_answers %> %</span>
   </p>
 <% else %>
-  <p class="failed_passed_test result"><strong><%=  @test_passage.user.name %></strong>, you did not pass the test <br>
+  <p class="failed_passed_test result"><strong><%=  @test_passage.user.email %></strong>, you did not pass the test <br>
     <span>Score: <%= @test_passage.percentage_correct_answers %> %</span></p>
 <% end %>
 

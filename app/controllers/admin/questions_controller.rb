@@ -23,7 +23,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to test_path(@question.test_id)
+      redirect_to admin_test_path(@question.test_id)
     else
       render :edit
     end
