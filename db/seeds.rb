@@ -2,9 +2,11 @@
 
 categories = Category.create!([{ title: 'SQL' }, { title: 'Python' }, { title: 'HTML' }, { title: 'CSS' }])
 
-users = User.create!([{ name: 'Nick', email: 'nick@example.com' }, { name: 'John', email: 'john@example.com' },
-                      { name: 'Mark', email: 'mark@example.com' }, { name: 'Mike', email: 'mike@example.com' },
-                      { name: 'Jane', email: 'jane@example.com' }])
+users = User.create!([{ email: 'nick@example.com', password: 'qwerty123' },
+                      { password: 'qwerty123', email: 'john@example.com' },
+                      { email: 'mark@example.com', password: 'qwerty123' },
+                      { password: 'qwerty123', email: 'mike@example.com' },
+                      { email: 'jane@example.com', password: 'qwerty123' }])
 
 tests = Test.create!(
   [
