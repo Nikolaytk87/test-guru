@@ -10,8 +10,8 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def create
-    @test = Test.new(test_params)
-    @test.author_id = current_user.id
+    @test = current_user.made_tests.build(test_params)
+    @test.author = current_user
     if @test.save
       redirect_to [:admin, @test]
     else
@@ -32,11 +32,6 @@ class Admin::TestsController < Admin::BaseController
   def destroy
     @test.destroy
     redirect_to admin_tests_path
-  end
-
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
   end
 
   private
