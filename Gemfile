@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.0'
+# localization
+gem 'rails-i18n', '6.0'
+# mail
 gem 'net-imap', '~>0.3.0'
 gem 'net-pop', '~> 0.1.0'
 gem 'net-smtp', '~> 0.3.0'
