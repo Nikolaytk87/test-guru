@@ -1,0 +1,85 @@
+ru:
+  project_name: "ТестГуру"
+  helpers:
+    select:
+      prompt: "Выберите"
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  actions:
+    back: "Назад"
+    edit: "Редактировать"
+    show: "Показать"
+    delete: "Удалить"
+    confirm: "Вы уверены?"
+
+  nav:
+    header: "Проект ТестГуру"
+    tests: "Доступные тесты"
+    register: "Регистация"
+    admin_header: "Панель администрирования ТестГуру"
+    welcome_html: "Привет <b>%{user_email}</b> ТестГуру"
+    login: "Войти"
+    logout: "Выйти"
+    confirm: "Вы уверены?"
+
+  footer:
+    project: "Учебный проект в онлайн-школе Thinknetica"
+    appointment: "Тесты по языкам программирования"
+    title: "Тест Гуру"
+
+  label:
+    title: "Название"
+    question: "Вопрос"
+    questions: "Вопросы"
+    level: "Уровень"
+    actions: "Действия"
+    start: "Начать"
+    next: "Следующий"
+    back: "Назад"
+
+
+  test_passages:
+    show:
+      header: "Прохождение %{test_title} теста"
+      amount_questions: "Количество вопросов: %{number}"
+      current_question: "Текущий вопрос №: %{number}"
+    result:
+      header: "Тест %{title} завершен"
+      successed_test_html: "Поздравляем, <strong>%{user}</strong> тест успешно пройден"
+      score: "Счет: %{pass_percentage} %"
+      failed_test_html: "<strong>%{user}</strong>, Вы не прошли тест"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  admin:
+    tests:
+      edit:
+        edit_test: "Редактировать Тест"
+      new:
+        create_test: "Создать новый Тест"
+      create:
+        success: "Тест успешно создан."
+      index:
+        new_test: "Новый Тест"
+      show:
+        create: "Создать новый Тест"
+        edit: "Редактировать текущий Тест"
+        new_question: "Создать новый Вопрос"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestsGuru!"

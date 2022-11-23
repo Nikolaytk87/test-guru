@@ -1,33 +1,83 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    select:
+      prompt: "Please select"
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  actions:
+    back: "Back"
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+    confirm: "Are you sure?"
+
+  footer:
+    project: "Educational project at Thinknetica online school"
+    appointment: "Programming Languages Quizzes"
+    title: "TestGuru"
+
+  nav:
+    header: "TestGuru Project"
+    tests: "All Tests"
+    register: "Register"
+    admin_header: "Admin Panel TestGuru"
+    welcome_html: "Welcome <b>%{user_email}</b> TestGuru"
+    login: "Login"
+    logout: "Logout"
+    confirm: "Are you sure?"
+
+  label:
+    title: "Title"
+    level: "Level"
+    question: "Question"
+    questions: "Questions"
+    actions: "Actions"
+    start: "Start"
+    next: "Next"
+    back: "Back"
+
+  test_passages:
+    show:
+      header: "Passage %{test_title} test"
+      amount_questions: "All Questions in this test: %{number}"
+      current_question: "Question Number №: %{number}"
+    result:
+      header: "The %{title} Test was Completed!"
+      successed_test_html: "Congratulations, <strong>%{user}</strong> test passed successfully"
+      score: "Score: %{pass_percentage} %"
+      failed_test_html: "<strong>%{user}</strong>, you did not pass the test"
+
+    shared:
+      errors:
+        header:
+          one: '%{count} error detected'
+          other: '%{count} errors detected'
+
+  admin:
+    tests:
+      edit:
+        edit_test: "Edit Test"
+      new:
+        create_test: "Create New Test"
+      create:
+        success: "Tests was successfully created."
+      index:
+        new_test: "New Test"
+      show:
+        create: "Create New Test"
+        edit: "Edit Current Test"
+        new_question: "Create New Question"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+

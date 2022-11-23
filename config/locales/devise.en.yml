@@ -4,6 +4,8 @@ en:
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
+      new:
+        resend_confirmation_instructions: "Resend confirmation instructions"
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
@@ -45,10 +47,26 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
       updated: "Your account has been updated successfully."
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
+      new:
+        header: "Become a Guru"
+        submit: "Sign up"
+        min_chars: "%{count_chars} characters minimum"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+      new:
+        header: "Log in"
+        submit: "Enter"
+    shared:
+      links:
+        login: "Login"
+        signup: "Sign up"
+        forgot: "Forgot your password?"
+        not_received_confirm: "Didn't receive confirmation instructions?"
+        not_received_unlock: "Didn't receive unlock instructions?"
+        sign_in_with: "Sign in with %{auth_provider}"
+
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
