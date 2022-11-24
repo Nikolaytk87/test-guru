@@ -19,6 +19,8 @@ ru:
     show: "Показать"
     delete: "Удалить"
     confirm: "Вы уверены?"
+    remember: "Запомнить"
+
 
   nav:
     header: "Проект ТестГуру"
@@ -29,6 +31,7 @@ ru:
     login: "Войти"
     logout: "Выйти"
     confirm: "Вы уверены?"
+    to_tests: "Перейти к тестам"
 
   footer:
     project: "Учебный проект в онлайн-школе Thinknetica"
@@ -44,6 +47,7 @@ ru:
     start: "Начать"
     next: "Следующий"
     back: "Назад"
+    enter_email: "Введите Email"
 
 
   test_passages:

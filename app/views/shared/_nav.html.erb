@@ -1,14 +1,24 @@
-<nav>
-  <% if user_signed_in? %>
-    <p class="nav user"><%= t('nav.welcome_html', user_email: current_user.email) %></p>
+<nav class="navbar navbar-light bg-light">
+  <%= link_to t('nav.header'), root_path, class: "navbar-brand ms-3" %>
+  <% if admin? %>
+    <span class="badge bg-primary">
+      <%= link_to t('nav.admin_header'), admin_tests_path,
+                                         class: "gx-5 nav nav-link link-light" %>
+    </span>
   <% end %>
-  <h2 class="nav nav-title"> <%= link_to t('nav.header'), root_path %></h2>
-  <ul class="nav-list">
-    <li class="nav-item"><%= link_to t('nav.tests'), tests_path, class:"nav nav-link" %></li>
-    <li class="nav-item"><%= link_to t('nav.register'), new_user_registration_path, class:"nav nav-link" %></li>
-    <li class="nav-item"><%= link_to t('nav.login'), new_user_session_path, class:"nav nav-link" %></li>
-    <li class="nav-item"><%= link_to t('nav.logout'), destroy_user_session_path, class:"nav nav-link",
-                                                            method: :delete,
-                                                            data: {confirm: t('nav.confirm')} %></li>
-  </ul>
+  <span class="navbar-text me-3">
+    <% if user_signed_in? %>
+      <%= t('nav.welcome_html', user_email: current_user.email) %>
+      <span class="badge bg-primary">
+        <%= link_to t('nav.logout'), destroy_user_session_path, class:"nav nav-link link-light",
+                                                                method: :delete,
+                                                                data: {confirm: t('nav.confirm')} %>
+      </span>
+    <% else %>
+      <div >
+        <%= link_to t('nav.login'), new_session_path(resource_name) %> |
+        <%= link_to t('nav.register'), new_registration_path(resource_name)  %>
+      </div>
+    <% end %>
+  </span>
 </nav>

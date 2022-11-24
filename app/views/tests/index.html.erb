@@ -1,10 +1,12 @@
-<h3><%= t('nav.tests') %></h3>
-<table>
-  <tr>
-    <th><%= t('label.title') %></th>
-    <th><%= t('label.questions') %></th>
-    <th><%= t('label.level') %></th>
-    <th><%= t('label.actions') %></th>
-  </tr>
-  <%= render @tests %>
-</table>
+<div class="container">
+  <h3 class="row justify-content-center mb-4"><%= t('nav.tests') %></h3>
+  <table class="table table-bordered text-center">
+    <tr class="table-primary border-primary">
+      <th><%= t('label.title') %></th>
+      <th><%= t('label.questions') %></th>
+      <th><%= t('label.level') %></th>
+      <th><%= t('label.actions') %></th>
+    </tr>
+    <%= render @tests %>
+  </table>
+</div>

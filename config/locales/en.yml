@@ -18,6 +18,8 @@ en:
     show: "Show"
     delete: "Delete"
     confirm: "Are you sure?"
+    remember: "Remember"
+
 
   footer:
     project: "Educational project at Thinknetica online school"
@@ -33,6 +35,7 @@ en:
     login: "Login"
     logout: "Logout"
     confirm: "Are you sure?"
+    to_tests: "Перейти к тестам"
 
   label:
     title: "Title"
@@ -43,6 +46,7 @@ en:
     start: "Start"
     next: "Next"
     back: "Back"
+    enter_email: "Enter Email"
 
   test_passages:
     show:

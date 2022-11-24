@@ -1,7 +1,12 @@
-<div class="nav nav-admin">
-  <span class="nav-admin title"> <%= t('nav.admin_header') %></span>
-  <div class="nav-admin user">
+<nav class="navbar navbar-light bg-light">
+  <%= link_to t('nav.header'), root_path, class: "navbar-brand ms-3" %>
+  <div class="navbar-text me-3">
     <%= t('nav.welcome_html', user_email: current_user.email) %>
-    <%= link_to t('nav.logout'), destroy_user_session_path, method: :delete  %>
+    <span class="badge bg-primary">
+      <%= link_to t('nav.logout'), destroy_user_session_path,
+                                   class:"nav nav-link link-light",
+                                   method: :delete,
+                                   data: {confirm: t('nav.confirm')} %>
+    </span>
   </div>
-</div>
+</nav>
