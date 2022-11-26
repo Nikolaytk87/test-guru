@@ -6,10 +6,16 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    gist_object
   end
 
   private
+
+  def gist_object
+    Struct.new('GistObject', :url)
+    response = @client.create_gist(gist_params)
+    Struct::GistObject.new(response.html_url)
+  end
 
   def gist_params
     { "description": I18n.t('label.gist_description', title: @test.title),
@@ -22,8 +28,6 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.body]
-    content += @question.answers.pluck(:body)
-    content.join("\n")
+    [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 end

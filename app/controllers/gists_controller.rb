@@ -1,16 +1,16 @@
 class GistsController < ApplicationController
   def create
     @test_passage = TestPassage.find(params[:test_passage_id])
-    response = GistQuestionService.new(@test_passage.current_question).call
-    @gist = @test_passage.current_question.gists.new(user: current_user, url: response.html_url)
-    redirect_to @test_passage, flash_options(response.html_url) if @gist.save
+    @gist = GistQuestionService.new(@test_passage.current_question).call
+    @test_passage.current_question.gists.create!(user: current_user, url: @gist.url)
+    redirect_to @test_passage, flash_options
   end
 
   private
 
-  def flash_options(url)
-    if response.present?
-      { notice: t('.success', link: gist_link(url)) }
+  def flash_options
+    if @gist.presence
+      { notice: t('.success', link: gist_link(@gist.url)) }
     else
       { alert: t('.failure') }
     end

@@ -38,9 +38,6 @@ gem 'jquery-rails', '~>4.5'
 gem 'spring'
 # Github client
 gem 'octokit', '~>6.0'
-# Networking
-gem 'faraday', '~>2.7'
-gem 'faraday-retry', '~>2.0'
 
 # Use Active Storage variant
 
