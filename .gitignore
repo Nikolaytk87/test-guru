@@ -32,8 +32,10 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-#vscode
+# vscode
 .vscode/
+# Environment Variables
+.env
 
 /public/packs
 /public/packs-test

@@ -34,6 +34,13 @@ gem 'devise', '~> 4.8'
 # bootstrap
 gem 'bootstrap', '~>5.2'
 gem 'jquery-rails', '~>4.5'
+# Spring
+gem 'spring'
+# Github client
+gem 'octokit', '~>6.0'
+# Networking
+gem 'faraday', '~>2.7'
+gem 'faraday-retry', '~>2.0'
 
 # Use Active Storage variant
 
@@ -45,6 +52,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # Environments Vaiable
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -56,7 +65,6 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'letter_opener'
-  gem 'spring'
 end
 
 group :test do
