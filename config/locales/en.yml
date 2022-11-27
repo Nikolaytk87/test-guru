@@ -20,7 +20,6 @@ en:
     confirm: "Are you sure?"
     remember: "Remember"
 
-
   footer:
     project: "Educational project at Thinknetica online school"
     appointment: "Programming Languages Quizzes"
@@ -35,7 +34,7 @@ en:
     login: "Login"
     logout: "Logout"
     confirm: "Are you sure?"
-    to_tests: "Перейти к тестам"
+    to_tests: "Go to Tests"
 
   label:
     title: "Title"
@@ -47,12 +46,24 @@ en:
     next: "Next"
     back: "Back"
     enter_email: "Enter Email"
+    description: "A question about %{title} from TestGuru"
+
+  gists:
+    create:
+      success: "Question save %{link}"
+      failure: "An error ocurred while saving gist"
+      to_save: "to Gist"
 
   test_passages:
+    create:
+      success: "Question save %{link}"
+      failure: "An error ocurred while saving gist"
+      to_save: "to Gist"
     show:
       header: "Passage %{test_title} test"
       amount_questions: "All Questions in this test: %{number}"
       current_question: "Question Number №: %{number}"
+      save_question: "Save question"
     result:
       header: "The %{title} Test was Completed!"
       successed_test_html: "Congratulations, <strong>%{user}</strong> test passed successfully"
@@ -66,6 +77,11 @@ en:
           other: '%{count} errors detected'
 
   admin:
+    gists:
+      index:
+        all_gists: "All Gists"
+        gist_creator: "Gist Creator"
+        gist_url: "Gist URL"
     tests:
       edit:
         edit_test: "Edit Test"
@@ -75,6 +91,7 @@ en:
         success: "Tests was successfully created."
       index:
         new_test: "New Test"
+        created_gists: "Show created Gists"
       show:
         create: "Create New Test"
         edit: "Edit Current Test"
@@ -83,5 +100,3 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
-
-

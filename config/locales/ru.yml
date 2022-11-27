@@ -21,7 +21,6 @@ ru:
     confirm: "Вы уверены?"
     remember: "Запомнить"
 
-
   nav:
     header: "Проект ТестГуру"
     tests: "Доступные тесты"
@@ -48,13 +47,25 @@ ru:
     next: "Следующий"
     back: "Назад"
     enter_email: "Введите Email"
+    gist_description: "Вопрос о %{title} от TestGuru"
+    url: "URL"
 
+  gists:
+    create:
+      success: "Question save %{link}"
+      failure: "An error ocurred while saving gist"
+      to_save: "to Gist"
 
   test_passages:
+    gist:
+      success: "Вопрос сохранён %{link}"
+      failure: "Во время сохранения gist произошла ошибка"
+      to_save: "в Gist"
     show:
       header: "Прохождение %{test_title} теста"
       amount_questions: "Количество вопросов: %{number}"
       current_question: "Текущий вопрос №: %{number}"
+      save_question: "Сохранить вопрос"
     result:
       header: "Тест %{title} завершен"
       successed_test_html: "Поздравляем, <strong>%{user}</strong> тест успешно пройден"
@@ -70,6 +81,11 @@ ru:
         other: "Обнаружено %{count} ошибки"
 
   admin:
+    gists:
+      index:
+        all_gists: "Все Gists"
+        gist_creator: "Создатель Gist"
+        gist_url: "Ссылка на Gist"
     tests:
       edit:
         edit_test: "Редактировать Тест"
@@ -79,6 +95,7 @@ ru:
         success: "Тест успешно создан."
       index:
         new_test: "Новый Тест"
+        created_gists: "Показать созданные Gists"
       show:
         create: "Создать новый Тест"
         edit: "Редактировать текущий Тест"
