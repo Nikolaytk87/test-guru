@@ -9,7 +9,7 @@ class GistsController < ApplicationController
   private
 
   def flash_options
-    if @gist.presence
+    if @gist.success
       { notice: t('.success', link: gist_link(@gist.url)) }
     else
       { alert: t('.failure') }

@@ -9,6 +9,10 @@ class OctokitClient
     @client.create_gist(params)
   end
 
+  def success?
+    @client.last_response.status&.to_s&.match?(/2\d\d/)
+  end
+
   private
 
   def setup_client

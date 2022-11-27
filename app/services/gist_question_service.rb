@@ -12,9 +12,9 @@ class GistQuestionService
   private
 
   def gist_object
-    Struct.new('GistObject', :url)
+    Struct.new('GistObject', :url, :success)
     response = @client.create_gist(gist_params)
-    Struct::GistObject.new(response.html_url)
+    Struct::GistObject.new(response.html_url, @client.success?)
   end
 
   def gist_params
