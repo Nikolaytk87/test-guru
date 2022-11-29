@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function () {
-  const form = document.querySelector('.new_user');
+  const form = document.querySelector('.registration_form');
   if (form) { form.addEventListener('input', checkConfirmation) }
 })
 
