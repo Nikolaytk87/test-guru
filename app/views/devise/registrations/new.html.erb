@@ -1,5 +1,5 @@
 <h2><%= t('.header') %></h2>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'registration_form new_user'}) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
     <%= f.label :first_name %><br />
@@ -22,7 +22,9 @@
   </div>
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: '' %>
+    <%= octicon 'x-circle-fill', class: 'text-danger hide' %>
+    <%= octicon 'check-circle-fill', class: 'text-success hide' %>
   </div>
   <div class="actions">
     <%= f.submit t('.submit') %>
