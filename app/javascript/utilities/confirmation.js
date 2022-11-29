@@ -5,18 +5,18 @@ document.addEventListener('turbolinks:load', function () {
 
 function checkConfirmation() {
   const password = document.getElementById('user_password')
-  const password_confirmation = document.getElementById('user_password_confirmation')
+  const passwordConfirmation = document.getElementById('user_password_confirmation')
 
   const SuccessIcon = this.querySelector('.octicon-check-circle-fill')
   const FailedIcon = this.querySelector('.octicon-x-circle-fill')
 
-  if (password_confirmation.value == "") {
+  if (passwordConfirmation.value == "") {
     FailedIcon.classList.add('hide')
     SuccessIcon.classList.add('hide')
     return
   }
 
-  if (password.value == password_confirmation.value) {
+  if (password.value == passwordConfirmation.value) {
     SuccessIcon.classList.remove('hide')
     FailedIcon.classList.add('hide')
   } else {
