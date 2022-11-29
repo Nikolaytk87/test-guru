@@ -38,6 +38,8 @@ gem 'jquery-rails', '~>4.5'
 gem 'spring'
 # Github client
 gem 'octokit', '~>6.0'
+# Icons
+gem 'octicons_helper'
 
 # Use Active Storage variant
 

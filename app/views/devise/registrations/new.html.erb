@@ -22,7 +22,9 @@
   </div>
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: '' %>
+    <%= octicon 'x-circle-fill', class: 'text-danger hide' %>
+    <%= octicon 'check-circle-fill', class: 'text-success hide' %>
   </div>
   <div class="actions">
     <%= f.submit t('.submit') %>
