@@ -1,5 +1,6 @@
 <div class="container">
   <h3><%= t('nav.tests') %></h3>
+  <%= render 'shared/errors', resource: @test %>
   <span class="badge bg-primary mb-3">
     <%= link_to t('.new_test'), new_admin_test_path,
                                 class: "gx-5 nav nav-link link-light"  %>

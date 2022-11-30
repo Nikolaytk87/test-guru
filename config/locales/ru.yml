@@ -77,8 +77,8 @@ ru:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
-        one: "Обнаружено %{count} ошибка"
-        other: "Обнаружено %{count} ошибки"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружены %{count} ошибки"
 
   admin:
     gists:
@@ -100,6 +100,8 @@ ru:
         create: "Создать новый Тест"
         edit: "Редактировать текущий Тест"
         new_question: "Создать новый Вопрос"
+      form_inline:
+        submit: "OK"
 
   tests_mailer:
     completed_test:
