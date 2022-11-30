@@ -96,6 +96,8 @@ en:
         create: "Create New Test"
         edit: "Edit Current Test"
         new_question: "Create New Question"
+      form_inline:
+        submit: "OK"
 
   tests_mailer:
     completed_test:

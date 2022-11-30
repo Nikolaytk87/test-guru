@@ -17,3 +17,5 @@ Turbolinks.start()
 ActiveStorage.start()
 import "utilities/sorting"
 import "utilities/confirmation"
+import "utilities/form_inline"
+import "utilities/progress_bar"
