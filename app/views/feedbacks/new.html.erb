@@ -1,0 +1,16 @@
+<%= form_with url: feedbacks_path, method: :post do |form| %>
+  <p>
+    <%= form.label :name, t('.name'), class: "mb-1 mt-1" %> <br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :email, t('.email'), class: "mb-1 mt-1" %> <br>
+    <%= form.email_field :email %>
+  </p>
+</p>
+<p>
+  <%= form.label :msg, t('.wishes'), class: "mb-2 mt-2" %> <br>
+  <%= form.text_area :msg, size: "70x10" %>
+</p>
+<%= form.submit t('.submit'), class: "mb-3 mt-1"  %>
+<% end %>

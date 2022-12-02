@@ -16,8 +16,8 @@
       </span>
     <% else %>
       <div >
-        <%= link_to t('nav.login'), new_session_path(resource_name) %> |
-        <%= link_to t('nav.register'), new_registration_path(resource_name)  %>
+        <%= link_to t('nav.login'), new_user_session_path %> |
+        <%= link_to t('nav.register'), new_user_registration_path %>
       </div>
     <% end %>
   </span>

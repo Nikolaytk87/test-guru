@@ -47,6 +47,15 @@ en:
     back: "Back"
     enter_email: "Enter Email"
     description: "A question about %{title} from TestGuru"
+    feedback: "Feedback"
+    feedback_subject: "Message received from %{email}"
+
+  feedbacks:
+    new:
+      submit: "Submit"
+      wishes: "Your wishes"
+      email: "Your Email"
+      name: "Your Name"
 
   gists:
     create:
