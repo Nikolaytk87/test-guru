@@ -39,6 +39,16 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.smtp_settings = {
+    tls: true,
+    address: 'smtp.yandex.ru',
+    port: 465,
+    domain: 'yandex.ru',
+    enable_starttls_auto: true,
+    user_name: ENV['SMTP_USERNAME'],
+    password: ENV['SMTP_PASSWORD'],
+    authentication: 'plain'
+  }
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.

@@ -49,6 +49,17 @@ ru:
     enter_email: "Введите Email"
     gist_description: "Вопрос о %{title} от TestGuru"
     url: "URL"
+    feedback: "Обратная связь"
+    feedback_subject: "Получено сообщение от %{email}"
+
+  feedbacks:
+    new:
+      submit: "Отправить"
+      wishes: "Ваши пожелания"
+      email: "Ваш Email"
+      name: "Ваше Имя"
+    create:
+      success_send: "Ваше сообщение успешно отправлено"
 
   gists:
     create:

@@ -8,6 +8,8 @@ users = User.create!([{ email: 'nick@example.com', password: 'qwerty123' },
                       { password: 'qwerty123', email: 'mike@example.com' },
                       { email: 'jane@example.com', password: 'qwerty123' }])
 
+admin = Admin.create!(email: 'admin@example.com', password: 'qwerty123', first_name: 'Nick', last_name: 'Nelson')
+
 tests = Test.create!(
   [
     { title: 'SQL Basics', level: 1, category: categories[0], author: users[0] },

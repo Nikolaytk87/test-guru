@@ -8,5 +8,9 @@
     <p><%= t('footer.appointment') %></p>
     <%= link_to t('footer.project'), "https://thinknetica.com/",
               target: "_blank", rel:'noopener nofollow' %>
+    <span class="badge bg-primary">
+      <%= link_to t('label.feedback'), new_feedback_path,
+                                         class: "gx-5 nav nav-link link-light" %>
+    </span>
   </div>
 </footer>
