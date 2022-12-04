@@ -18,8 +18,14 @@ class Test < ApplicationRecord
         lambda { |title|
           joins(:category).where(categories: { title: }).order(title: :desc)
         }
+  scope :by_ids, ->(ids) { where(id: ids) }
+  scope :by_level, ->(level) { where(level:) }
 
-  def self.filter_by_category(title)
-    by_category(title).pluck(:title)
+  def self.filter_by_category(category)
+    by_category(category).pluck(:title)
+  end
+
+  def self.filter_by_level(level)
+    by_level(level).pluck(:title)
   end
 end

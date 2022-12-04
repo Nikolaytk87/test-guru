@@ -51,6 +51,11 @@ ru:
     url: "URL"
     feedback: "Обратная связь"
     feedback_subject: "Получено сообщение от %{email}"
+    rule_name: "Название правила"
+    rule_value: "Опция правила"
+    my_badges: "Мои награды"
+    all_badges: "Список существующих наград"
+
 
   feedbacks:
     new:
@@ -66,6 +71,10 @@ ru:
       success: "Question save %{link}"
       failure: "An error ocurred while saving gist"
       to_save: "to Gist"
+
+  badges:
+    index:
+      header: "Показать Награды"
 
   test_passages:
     gist:
@@ -106,6 +115,7 @@ ru:
         success: "Тест успешно создан."
       index:
         new_test: "Новый Тест"
+        show_badges: "Посмотреть Бэйджи"
         created_gists: "Показать созданные Gists"
       show:
         create: "Создать новый Тест"
@@ -113,6 +123,24 @@ ru:
         new_question: "Создать новый Вопрос"
       form_inline:
         submit: "OK"
+    badges:
+      create:
+        success: "Бэйдж успешно создан"
+      destroy:
+        success: "Бэйдж успешно удален"
+      update:
+        success: "Бэйдж успешно обновлен"
+      index:
+        header: "Все Бэйджи"
+        new: "Новый Бэйдж"
+        image: "Изображение"
+      new:
+        header: "Создать Badge"
+      edit:
+        header: "Редактировать Badge"
+      show:
+        image: "Изображение"
+
 
   tests_mailer:
     completed_test:
