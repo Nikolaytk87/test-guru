@@ -20,7 +20,7 @@ class TestPassage < ApplicationRecord
   end
 
   def current_question_number
-    test.questions.index(current_question).next
+    test.questions.index(current_question)&.next
   end
 
   def percentage_correct_answers
