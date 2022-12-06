@@ -49,6 +49,10 @@ en:
     description: "A question about %{title} from TestGuru"
     feedback: "Feedback"
     feedback_subject: "Message received from %{email}"
+    rule_name: "Rule Name"
+    rule_value: "Rule Options"
+    my_badges: "My Badges"
+    all_badges: "All Badges"
 
   feedbacks:
     new:
@@ -63,6 +67,9 @@ en:
       failure: "An error ocurred while saving gist"
       to_save: "to Gist"
 
+  badges:
+    index:
+      header: "Show Badges"
   test_passages:
     create:
       success: "Question save %{link}"
@@ -100,6 +107,7 @@ en:
         success: "Tests was successfully created."
       index:
         new_test: "New Test"
+        show_badges: "Show Badges"
         created_gists: "Show created Gists"
       show:
         create: "Create New Test"
@@ -107,6 +115,23 @@ en:
         new_question: "Create New Question"
       form_inline:
         submit: "OK"
+    badges:
+      create:
+        success: "Badge Success Created"
+      destroy:
+        success: "Badge Success Removed"
+      update:
+        success: "Badge Success Updated"
+      index:
+        header: "All Badges"
+        new: "New Badge"
+        image: "Image"
+      new:
+        header: "Create Badge"
+      edit:
+        header: "Edit Badge"
+      show:
+        image: "Show Image"
 
   tests_mailer:
     completed_test:

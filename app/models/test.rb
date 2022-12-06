@@ -14,12 +14,18 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
-  scope :by_category,
-        lambda { |title|
-          joins(:category).where(categories: { title: }).order(title: :desc)
+  scope :by_category_id,
+        lambda { |id|
+          joins(:category).where(categories: { id: }).order(title: :desc)
         }
+  scope :by_ids, ->(ids) { where(id: ids) }
+  scope :by_level, ->(level) { where(level:) }
 
-  def self.filter_by_category(title)
-    by_category(title).pluck(:title)
+  def self.filter_by_category(id)
+    by_category_id(id).pluck(:id)
+  end
+
+  def self.filter_by_level(level)
+    by_level(level).pluck(:title)
   end
 end

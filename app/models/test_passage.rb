@@ -7,6 +7,10 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question
 
+  def passed_test_ids
+    user.test_passages.where(passed: true).pluck(:test_id).uniq
+  end
+
   def successfully_passed_test?
     percentage_correct_answers >= PASSED_RATE
   end
@@ -16,7 +20,7 @@ class TestPassage < ApplicationRecord
   end
 
   def current_question_number
-    test.questions.index(current_question).next
+    test.questions.index(current_question)&.next
   end
 
   def percentage_correct_answers
@@ -25,6 +29,7 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.passed = true if successfully_passed_test?
     save!
   end
 
