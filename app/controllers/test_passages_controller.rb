@@ -24,6 +24,6 @@ class TestPassagesController < ApplicationController
   end
 
   def check_timer
-    redirect_to tests_path, alert: t('label.end_time') if @test_passage.end_of_test_time?
+    redirect_to result_test_passage_path(@test_passage), alert: t('label.end_time') if @test_passage.end_of_test_time?
   end
 end
