@@ -2,6 +2,7 @@
 <%= link_to  t('.edit') , edit_admin_test_path(@test)  %>
 <p><strong><%= t('label.title') %></strong>: <%= @test.title %></p>
 <p><strong><%= t('label.level') %></strong>: <%= @test.level %></p>
+<p><strong><%= t('label.timer') %></strong>: <%= @test.timer %></p>
 <p><%= link_to t('.new_question'),  new_admin_test_question_path(@test) %></p>
 <table>
   <tr>
