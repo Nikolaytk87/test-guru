@@ -82,3 +82,12 @@ test_results = TestPassage.create(
     { user_id: users[2].id, test: tests[3] }
   ]
 )
+
+badges = Badge.create!(
+  [
+    { title: 'Успешное прохождение всех тестов категории Python', image: 'category.png', rule_name: 'category?',
+      rule_value: 'Python' },
+    { title: 'Прошел все тесты уровня 1', image: 'level.png', rule_name: 'level?', rule_value: 1 },
+    { title: 'Прошел тест с первой попытки', image: 'attempt.png', rule_name: 'attempt?', rule_value: 1 }
+  ]
+)
