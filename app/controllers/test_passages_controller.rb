@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TestPassagesController < ApplicationController
   before_action :set_test_passage, only: %i[show update result]
   before_action :check_timer, only: %i[show update]

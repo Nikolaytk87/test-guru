@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GistsHelper
   BODY_LENGTH = 25
 

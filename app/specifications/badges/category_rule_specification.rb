@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Badges
   class CategoryRuleSpecification < BadgeSpecifications
     def satisfied?

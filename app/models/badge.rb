@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Badge < ApplicationRecord
   RULES = %i[category? level? attempt?].freeze
 

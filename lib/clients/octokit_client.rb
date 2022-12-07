@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class OctokitClient
   GITHUB_TOKEN = ENV['GITHUB_TOKEN'].freeze
 

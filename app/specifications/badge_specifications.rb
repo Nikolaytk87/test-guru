@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BadgeSpecifications
   def initialize(test_passage, option)
     @option = option
