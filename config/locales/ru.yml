@@ -55,7 +55,8 @@ ru:
     rule_value: "Опция правила"
     my_badges: "Мои награды"
     all_badges: "Список существующих наград"
-
+    timer: "Время в минутах"
+    end_time: "Время прохожденя теста истекло"
 
   feedbacks:
     new:
@@ -109,6 +110,8 @@ ru:
     tests:
       edit:
         edit_test: "Редактировать Тест"
+      form:
+        timer: "Время в минутах"
       new:
         create_test: "Создать новый Тест"
       create:

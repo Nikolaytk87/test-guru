@@ -1,4 +1,5 @@
 <h1><%= t('.header',test_title: @test_passage.test.title) %></h1>
+
 <div class="progress-bar-container">
   <%= content_tag :div, nil,
                         class: "progress-bar",
@@ -9,6 +10,9 @@
 </div>
 <p class="show"><%= t('.amount_questions', number: @test_passage.number_of_questions) %></p>
 <p class="show"><%= t('.current_question', number: @test_passage.current_question_number) %></p>
+<div class="timer-container mx-auto bg-secondary">
+  <div class="timer pt-3 pb-3 text-light"  data-timer = "<%= @test_passage.timer %>"></div>
+</div>
 <p>
   <b>
     <%= @test_passage.current_question.body %>

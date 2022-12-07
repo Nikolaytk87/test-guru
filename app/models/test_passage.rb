@@ -37,6 +37,14 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def timer
+    (created_at + test.timer * 60) - Time.current if test.timer.present?
+  end
+
+  def end_of_test_time?
+    timer <= 0 if timer.present?
+  end
+
   private
 
   def before_validation_set_current_question

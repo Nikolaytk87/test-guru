@@ -53,6 +53,8 @@ en:
     rule_value: "Rule Options"
     my_badges: "My Badges"
     all_badges: "All Badges"
+    timer: "Time in minutes"
+    end_time: "Test time expired"
 
   feedbacks:
     new:
@@ -70,6 +72,7 @@ en:
   badges:
     index:
       header: "Show Badges"
+
   test_passages:
     create:
       success: "Question save %{link}"
@@ -101,6 +104,8 @@ en:
     tests:
       edit:
         edit_test: "Edit Test"
+      form:
+        timer: "Time in minutes"
       new:
         create_test: "Create New Test"
       create:
